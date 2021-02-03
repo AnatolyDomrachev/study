@@ -1,0 +1,13 @@
+sudo docker-compose up
+docker-compose logs -f server
+sudo docker-compose logs -f server
+sudo docker-compose logs server
+sudo docker-compose logs client
+docker-compose ps
+sudo docker-compose ps
+docker-compose exec server free -m
+sudo docker-compose exec server free -m
+docker-compose images
+sudo docker-compose images
+sudo docker-compose down
+
