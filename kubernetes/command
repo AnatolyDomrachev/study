@@ -1,0 +1,16 @@
+1
+	kubectl create -f k8s-mastery/resource-manifests/sa-frontend-pod.yaml 
+	kubectl get pods
+	kubectl port-forward sa-frontend 8888:80
+	kubectl get pod -l app=sa-frontend
+	kubectl get pod --show-labels
+	kubectl create -f  k8s-mastery/resource-manifests/service-sa-frontend-lb.yaml
+	kubectl get svc
+	kubectl apply -f  k8s-mastery/resource-manifests/sa-frontend-deployment.yaml
+	kubectl delete pod sa-frontend
+	kubectl apply -f  /tmp/sa-frontend-deployment.yaml --record
+	kubectl rollout status deployment sa-frontend
+	kubectl get pods
+	kubectl rollout history deployment sa-frontend
+	kubectl rollout undo deployment sa-frontend --to-revision=1
+	kubectl apply -f  k8s-mastery/resource-manifests/sa-logic-deployment.yaml --record
