@@ -1,0 +1,8 @@
+docker network ls
+docker ps
+docker network inspect bridge 
+docker network create --driver bridge --subnet 192.168.100.0/24 --ip-range 192.168.100.0/24 my-bridge-network
+ip addr
+brctl show docker0
+sudo apt install bridge-utils
+sudo brctl show docker0
