@@ -1,0 +1,1 @@
+If your containers are connected to the same user defined network (create a network docker network create my-network and run your container with --net my-network) they can reference each other using the container name
